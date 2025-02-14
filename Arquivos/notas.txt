@@ -1,0 +1,19 @@
+
+Instalar DJango: pip install django
+Iniciar DJango: django-admin startproject nome_da_pasta .
+
+
+Iniciar um Servidor: python manage.py runserver
+Ctrl+C para parar
+
+
+Iniciar um App: python manage.py startapp nome
+
+
+procurar a pasta no projeto: 'DIRS': [BASE_DIR / 'templates'],
+
+criar arquivo de migração: python manage.py makemigrations
+pegar todo os arquivos de migração que não foram executados e executa eles: python manage.py migrate       
+
+
+

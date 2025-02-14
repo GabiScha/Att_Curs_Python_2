@@ -1,0 +1,59 @@
+<h1>Cadastro de alunos</h1>
+
+{% if status == '1' %}
+    <p>Nome Inválido </p>
+{% elif status == '0' %}
+    <p>Dados cadastrados com Sucesso</p>
+{% elif status == '2' %}
+<p>Preencha sua idade</p>
+{% elif status == '3' %}
+<p>NÃO A IDADES NEGATIVAS</p>
+{% endif %}
+
+
+<hr>
+<form action="{% url 'criar_aluno' %}" method="POST"> {% csrf_token %}
+
+<label for="">Nome: </label>
+<input type="text" required name="nome" class="form-control" placeholder="Digite seu nome">
+<br>
+<label for="">Idade: </label>
+<input type="number" required name="idade" class="form-control" placeholder="Digite sua Idade">
+<br>
+<label for="">Email: </label>
+<input type="email" required name="email" class="form-control" placeholder="Digite seu email">
+<br>
+<input type="submit">
+
+
+</form>
+
+<hr>
+
+
+
+<table class="table">
+    <thead>
+        
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Idade</th>
+        <th scope="col">Exluir</th>
+      </tr>
+      
+    </thead>
+    <tbody>
+        {% for i in alunos %}
+      <tr>
+        <td>{{i.nome}}</td>
+        <td>{{i.idade}}</td>
+        <td>{{i.email}}</td>
+        <td><a href="/aluno/deletar_aluno/{{i.id}}">EXCLUIR</a>></td>
+      </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+
+
+

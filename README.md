@@ -13,13 +13,14 @@ O objetivo é do projeto é continuar meus estudos na linguagem python e colocar
 1. Clone o repositório.
 2. Instale Python.
 3. Instale o  Visual Studio.
-4. Crie um ambiente virtual (tutorial resumido pra windows está no bloco de notas dentro do arquivo).
+4. Crie um ambiente virtual.
 
 <h2 id=technology>:toolbox: Tecnologias</h2>
 
 Ferramentas utilizadas no desenvolvimento do projeto:
 
 - IDE: <a href="https://visualstudio.microsoft.com/downloads/">Visual Studio</a>
+- Framework Web: <a href="https://www.djangoproject.com/">Django</a>
 
 <h2 id=author>:grin: Autor</h2>
 
